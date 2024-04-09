@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans 
+classpath:/org/springframework/beans/factory/xml/spring-beans-3.0.xsd 
+http://www.springframework.org/schema/context 
+classpath:/org/springframework/context/config/spring-context-3.0.xsd
+http://www.springframework.org/schema/aop 
+classpath:/org/springframework/aop/config/spring-aop-3.0.xsd
+http://www.springframework.org/schema/util 
+ http://www.springframework.org/schema/util/spring-util.xsd
+">
+
+
+<!--  Standalone List -->
+
+<util:list list-class="java.util.LinkedList" 
+id="mybestfriend">
+<value>Aman</value>
+<value>Raman</value>
+<value>Rohit</value>
+<value>jubin</value>
+
+</util:list>
+
+<!-- Standalone Map -->
+
+<util:map map-class="java.util.HashMap" id="fees">
+<entry key="Spring framework" value="8000"/>
+<entry key="Phython framework" value="5000"/>
+<entry key="Hibernate framework" value="5400"/>
+
+</util:map>
+
+
+<bean class="com.springcore.Standalone.collections.Person" name="person1">
+
+ <property name="friends" ref="mybestfriend"/>
+<property name="feestructure" ref="fees"/>
+
+</bean>
+
+ 
+
+
+
+
+
+
+
+</beans>

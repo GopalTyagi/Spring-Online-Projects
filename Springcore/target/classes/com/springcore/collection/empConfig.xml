@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans 
+classpath:/org/springframework/beans/factory/xml/spring-beans-3.0.xsd 
+http://www.springframework.org/schema/context 
+classpath:/org/springframework/context/config/spring-context-3.0.xsd
+http://www.springframework.org/schema/aop 
+classpath:/org/springframework/aop/config/spring-aop-3.0.xsd
+">
+
+
+ <bean name="emp" class="com.springcore.collection.Employee">
+
+<property name="name" value="Radhe"/>
+<property name="phones">
+<list>
+<value>998998999</value>
+<value>228998999</value>
+<value>118998999</value>
+<null/>
+</list>
+</property>
+
+
+<property name="address">
+<set>
+<value>sehore</value>
+<value>Indore</value>
+<value>kanpur</value>
+<value>bhopal</value>
+</set>
+</property>
+
+<property name="courses">
+<map>
+<entry key="java" value="2month"/>
+<entry key="html" value="3month"/>
+<entry key="css" value="4month"/>
+<entry key="phython" value="4month"/>
+</map>
+</property>
+
+  </bean> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </beans>

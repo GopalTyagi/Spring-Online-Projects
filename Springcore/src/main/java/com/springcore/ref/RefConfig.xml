@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans 
+classpath:/org/springframework/beans/factory/xml/spring-beans-3.0.xsd 
+http://www.springframework.org/schema/context 
+classpath:/org/springframework/context/config/spring-context-3.0.xsd
+http://www.springframework.org/schema/aop 
+classpath:/org/springframework/aop/config/spring-aop-3.0.xsd
+">
+ 
+
+
+<bean class="com.springcore.ref.B" name="bref">
+<property name="y" value="100"/>
+</bean>
+
+<bean class="com.springcore.ref.A" name="aref">
+<property name="q" value="12"/>
+
+
+<!-- <property name="ob">
+<ref bean="bref"/>
+</property> -->
+
+<property name="ob" ref="bref"/>
+
+
+<!--
+ three ways to reference 
+ref as elememnt
+ref as attribute 
+also specify p schema
+ -->
+</bean>
+
+
+
+
+
+
+
+
+</beans>

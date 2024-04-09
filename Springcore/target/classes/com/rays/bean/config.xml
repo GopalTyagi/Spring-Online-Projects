@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans 
+classpath:/org/springframework/beans/factory/xml/spring-beans-3.0.xsd 
+http://www.springframework.org/schema/context 
+classpath:/org/springframework/context/config/spring-context-3.0.xsd
+http://www.springframework.org/schema/aop 
+classpath:/org/springframework/aop/config/spring-aop-3.0.xsd
+">
+
+
+	<!-- this is our beans (We used value as attribute) -->
+
+	<bean class="com.rays.bean.Student" name="student1">
+
+		<property name="id" value="111" />
+
+		<property name="name" value="Krishna" />
+
+		<property name="Address" value="Bhopal" />
+
+	</bean>
+
+	<!-- this is our Second bean (We used value as attribute) -->
+
+	<bean class="com.rays.bean.Student" name="student2">
+
+		<property name="id" value="112" />
+
+		<property name="name" value="mangal" />
+
+		<property name="Address" value="sehore" />
+
+
+	</bean>
+
+	<!-- this is our p Schema type -->
+
+	<bean class="com.rays.bean.Student" name="student3" p:id="113"
+		p:name="Gopal Tyagi" p:address="Indore" />
+
+
+
+
+
+</beans>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans 
+classpath:/org/springframework/beans/factory/xml/spring-beans-3.0.xsd 
+http://www.springframework.org/schema/context 
+classpath:/org/springframework/context/config/spring-context-3.0.xsd
+http://www.springframework.org/schema/aop 
+classpath:/org/springframework/aop/config/spring-aop-3.0.xsd
+">
+
+<bean class="com.springcore.ConstructorInjection.Certificate" name="cer" c:name="Python is programming Language">
+<!-- <constructor-arg value="Java is Popular Language"/> -->
+
+</bean>
+
+<!-- Injecting Reference type -->
+
+<bean class="com.springcore.ConstructorInjection.Person" name="person">
+<constructor-arg value="gopal"/>
+<constructor-arg value="13" type="int"/>
+<constructor-arg ref="cer"/>
+</bean>
+
+
+<!-- Constructor Injection with Ambiguity problem and Solution -->
+
+<bean class="com.springcore.ConstructorInjection.Addition" name="add">
+
+<constructor-arg  value="12" type="int" index="1"/>
+
+<!-- by default it will resolve String and we can change it by defing type 
+   We can declare type and also decide the index  -->
+
+<constructor-arg  value="24" type="int" index="0"/>
+</bean>
+
+</beans>
